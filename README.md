@@ -1,0 +1,1 @@
+Adds "copy name" / "copy path" items to treeview context menus and tab context menus.
