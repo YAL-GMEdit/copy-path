@@ -69,6 +69,10 @@
 		});
 		var menu = $gmedit["ui.ChromeTabMenu"].menu;
 		insertAtMenuItem(menu, "find-references", [copyName, copyPath]);
+		GMEdit.on("tabMenu", function(e) {
+			targetFile = e.target.gmlFile;
+			copyPath.enabled = targetFile.path != null;
+		});
 	}
 	GMEdit.register("copy-path", {
 		init: function(state) {
